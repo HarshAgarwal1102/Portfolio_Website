@@ -593,6 +593,13 @@ padding: 5rem;
     gap: 1rem;
 }
 
+.java-icon{
+    font-size: 6rem;
+}
+.jav{
+    width: 5rem;
+    height: 5.8rem
+}
 @media(max-width:1597px){
     .container{
         width: 1000px;

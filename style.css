@@ -445,10 +445,10 @@ a{
 }
 .skill-fade-text{
     position: absolute;
-    font-size: 15em;
+    font-size: 10em;
     font-style: bold;
     color: rgb(231,231,231);
-    bottom: -34.5%;
+    bottom: -20.5%;
     right: 0%;
     user-select: none;
     /* overflow-x: hidden; */

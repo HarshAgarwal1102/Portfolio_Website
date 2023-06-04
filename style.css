@@ -359,7 +359,7 @@ a{
     flex-direction: column;
     color: white;
     padding: 2em;
-    bottom: 20%;
+    bottom: 14%;
     z-index: 5;
     gap: 1em;
     transition: all 0.4s;

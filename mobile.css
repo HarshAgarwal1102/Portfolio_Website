@@ -21,8 +21,8 @@
     }
     .nav-items{
         padding: 0px;
-    padding-left: 1rem;
-    margin: 30px;
+    padding-left: 3rem;
+    margin: 25px;
     gap: 1rem;
     }
     .navbar{
@@ -199,15 +199,15 @@
     }
 
     .java-icon{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .jav{
         width: 1.8rem;
-        height: 2.4rem;
+        height: 2rem;
     }
     .sql{
         width: 3.5rem;
-        height: 2.8rem;
+        height: 2rem;
         filter: brightness(0) invert(1);
     }
 

@@ -71,8 +71,8 @@
     }
     .user-image{
         /* position: relative; */
-        padding: 2rem;
-        animation: scaleImage 5s linear infinite;
+        padding: 0rem;
+        /* animation: scaleImage 5s linear infinite; */
          
      }
     .faded-text{

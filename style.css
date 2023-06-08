@@ -82,7 +82,7 @@ a{
     user-select: none;
     font-size: 6em;
     color: rgb(231,231,231);
-    bottom: -10%;
+    bottom: -8%;
     left: 2%;
     font-weight: bold;
     transition: all 3s;
@@ -161,10 +161,10 @@ a{
  .user-image{
     /* position: relative; */
     padding: 2.5rem;
-    filter: grayscale(1);
-    transition: all 1s;
+    /* filter: grayscale(1); */
+    /* transition: all 1s; */
     z-index: -10;
-    animation: scaleImage 5s linear infinite;
+    /* animation: scaleImage 5s linear infinite; */
  }
  .user-image img{
     z-index: -9;

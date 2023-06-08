@@ -16,11 +16,14 @@
         margin-left: -0.9rem;
     }
     .logo{
-        width: 60px;   
+        width: 63px;
+        margin: 14px; 
     }
     .nav-items{
-        padding: 0;
-        padding-left: 3.5rem;
+        padding: 0px;
+    padding-left: 1rem;
+    margin: 30px;
+    gap: 1rem;
     }
     .navbar{
         width: 10%;
@@ -178,6 +181,20 @@
     .project-content-right{
         right: 5%;
     }
+
+    .java-icon{
+        font-size: 2.5rem;
+    }
+    .jav{
+        width: 1.8rem;
+        height: 2.4rem;
+    }
+    .sql{
+        width: 3.5rem;
+        height: 2.8rem;
+        filter: brightness(0) invert(1);
+    }
+
     .skills-container{
         margin-top: 3rem;
         padding: 1rem;

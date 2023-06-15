@@ -619,7 +619,8 @@
         font-weight: 500;
     }
     .contactus-form-container{
-        margin-left: 1rem;
+        margin-left: 0rem;
+        width: 27.4rem;
         margin-top: 10px;
     }
  
@@ -652,7 +653,7 @@
     }
  
     .icon-wrapper{
-        margin-right: -1rem;
+        margin-right: -2rem;
         gap: 1rem;
     }
     footer{

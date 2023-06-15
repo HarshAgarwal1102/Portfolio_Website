@@ -442,6 +442,10 @@ a{
     flex-wrap: wrap;
     position: relative;
     gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 .skill-fade-text{
     position: absolute;

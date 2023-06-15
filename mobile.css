@@ -223,10 +223,15 @@
         flex-direction: column;
     }
     .skill-container-right{
-        width: 90%;
-        display: flex;
-        position: relative;
-        gap: 1rem;
+        width: 100%;
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     }
     .skill-heading{
         
@@ -561,12 +566,12 @@
         display: flex;
         flex-direction: column;
     }
-    .skill-container-right{
+    /* .skill-container-right{
         width: 90%;
         display: flex;
         position: relative;
         gap: 1rem;
-    }
+    } */
     .skill-heading{
         
         font-size: 35px;
@@ -901,12 +906,12 @@
         display: flex;
         flex-direction: column;
     }
-    .skill-container-right{
+    /* .skill-container-right{
         width: 90%;
         display: flex;
         position: relative;
         gap: 1rem;
-    }
+    } */
     .skill-heading{
         
         font-size: 35px;
@@ -1242,12 +1247,12 @@
         display: flex;
         flex-direction: column;
     }
-    .skill-container-right{
+    /* .skill-container-right{
         width: 90%;
         display: flex;
         position: relative;
         gap: 1rem;
-    }
+    } */
     .skill-heading{
         
         font-size: 35px;
@@ -1583,12 +1588,12 @@
         display: flex;
         flex-direction: column;
     }
-    .skill-container-right{
+    /* .skill-container-right{
         width: 90%;
         display: flex;
         position: relative;
         gap: 1rem;
-    }
+    } */
     .skill-heading{
         
         font-size: 35px;
@@ -1924,12 +1929,12 @@
         display: flex;
         flex-direction: column;
     }
-    .skill-container-right{
+    /* .skill-container-right{
         width: 90%;
         display: flex;
         position: relative;
         gap: 1rem;
-    }
+    } */
     .skill-heading{
         
         font-size: 35px;

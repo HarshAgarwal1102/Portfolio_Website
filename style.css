@@ -428,16 +428,18 @@ a{
     position: relative;
     display: flex;
     padding: 5rem;
-    margin: 6rem auto;
-    gap: 30px;
+    margin: 2rem auto;
+    gap: 94px;
 }
 .skill-container-left{
-    width: 50%;
+    margin-left: -3rem;
+    width: 33rem;
     display: flex;
     flex-direction: column;
 }
 .skill-container-right{
-    width: 52%;
+    margin-right: -3rem;
+    width: 56%;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -449,13 +451,12 @@ a{
 }
 .skill-fade-text{
     position: absolute;
-    font-size: 10em;
-    font-style: bold;
+    font-size: 8em;
+    /* font-style: bold; */
     color: rgb(231,231,231);
-    bottom: -20.5%;
+    bottom: -10.5%;
     right: 0%;
     user-select: none;
-    /* overflow-x: hidden;*/
 }
 .blob-style{
     position: absolute;
@@ -560,10 +561,10 @@ a{
     font-size: 1.5rem;
 }
 footer{
-position: relative;
-margin-top: -1px;
-background-color: #343d68;
-padding: 5rem;
+    position: relative;
+    margin-top: -1px;
+    background-color: #343d68;
+    padding: 2rem;
 }
 .footer-wrapper{
     display: flex;
@@ -582,6 +583,7 @@ padding: 5rem;
 }
 .link-wrapper{
     display: flex;
+    margin-left: -6rem;
     gap: 1.2rem;
 }
 .link-wrapper div a{
@@ -594,7 +596,8 @@ padding: 5rem;
 }
 .icon-wrapper{
     display: flex;
-    gap: 1rem;
+    margin-right: -6rem;
+    gap: 1.5rem;
 }
 
 .java-icon{

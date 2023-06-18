@@ -21,7 +21,7 @@
     }
     .nav-items{
         padding: 0px;
-    padding-left: 1.85rem;
+    padding-left: 6.85rem;
     margin: 25px;
     gap: 1rem;
     }
@@ -65,8 +65,17 @@
         padding: 0 1rem;
         padding-bottom: 0rem;
     }
+
+    .hero-section-left {
+        margin-left: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
     .my-image{
-        /* display: inline-block; */
+        margin-left: 6rem;
         width: 250px;
     }
     .user-image{
@@ -91,6 +100,12 @@
         text-align: center;
         padding-top: 30px;
     
+    }
+    .project-section {
+        background-color: rgb(231,231,231);
+        margin-top: 4rem;
+        margin-left: 0rem;
+        width: 30.4rem;
     }
     .project-container{
         max-width: 400px;
@@ -121,7 +136,7 @@
     }
     
     .project-number-left{
-        left: 281px;
+        left: 322px;
         top: -26px;
     }
     
@@ -223,28 +238,23 @@
         flex-direction: column;
     }
     .skill-container-right{
-        width: 100%;
-    /* display: flex;
-    position: relative;
-    gap: 1rem;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center; */
+        width: 21rem;
+        margin-right: 0rem;
+        margin-left: 2.4rem;
     }
     .skill-heading{
         
         font-size: 35px;
-        /* font-style:700; */
-        font-weight: 800;
-        color: var(--bgOrange);
-        line-height: 4rem;
+    font-weight: 800;
+    color: var(--bgOrange);
+    line-height: 4rem;
+    margin-left: 4rem;
     }
     .skill-subHeading{
         margin-top: 1rem;
-        /* text-align: justify; */
-        width: 23rem;
+        
+        margin-left: 4rem;
+        width: 26rem;
     }
     .skill-subHeading p{
         margin: 5px 0;
@@ -281,6 +291,8 @@
     }
     .contactus-form-container{
         margin-top: 10px;
+        margin-left: 0rem;
+        width: 30.4rem;
     }
  
     .form{
@@ -289,7 +301,7 @@
     }
     #submit-btn{
         font-size: 1rem;
-        margin: 0.6rem 4rem;
+        margin: 0.6rem 7rem;
         padding: 15px;
         border-radius: 5px;
         transition: all 0.4s;
@@ -312,12 +324,12 @@
     }
  
     .icon-wrapper{
-        
-        gap: 1rem;
+        margin-right: -5rem;
+    gap: 1rem;
     }
     footer{
         padding: 1rem;
-        width: 100%;
+    width: 30.4rem;
     }
     .footer-wrapper{
         display: flex;
@@ -328,37 +340,23 @@
 }
 
 @media(max-width:390px){
- 
-    .nav-items{
-        padding-left: 4rem;
-    }
-    
     .user-image img{
-        margin-left: 3rem;
+        margin-left: 7rem;
         z-index: -9;
      }
 
     .hero-section-left{
-        margin-left: 3rem;
+        margin-left: 7rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
     }
 
-    .project-section{
-        background-color: rgb(231,231,231);
-        margin-top: 4rem;
-        margin-right: -3rem;
-    }
-
-    .project-number-left{
-        left: 300px;
-    }
-
     .skills-container{
         margin-left: 0rem;
         width: 27rem;
+        gap : 65px;
     }
 
     .skill-container-left{
@@ -366,145 +364,21 @@
         display: flex;
         flex-direction: column;
     }
+    .skill-container-right {
+        margin-left: 4.4rem;
+    }
 
     .skill-subHeading{
-        margin-left: 0rem;
-        width: 25rem;
-    }
-    
-    .contactus-form-container{
-        margin-left: 0rem;
-        width: 27.4rem;
-    }
- 
-    #submit-btn{
-        margin: 0.6rem 5.5rem;
-    }
-
-    .icon-wrapper{
-        margin-right: -2rem;
-    }
-    footer{
-        width: 27.4rem;
-    }
-}
-
-@media(max-width:380px){
-    
-    .nav-items{
-        padding-left: 3.5rem;
-    }
-
-    .skills-container{
-        width: 26rem;
-    }
-    
-    .contactus-form-container{
-        width: 26.7rem;
-    }
- 
-    #submit-btn{
-        margin: 0.6rem 5.2rem;
-    }
- 
-    .icon-wrapper{
-        margin-right: -1rem;
-    }
-    footer{
-        width: 26.7rem;
-    }
-}
-
-@media(max-width:370px){
-    
-    .nav-items{
-        padding-left: 2.8rem;
-    }
-    
-    .skill-subHeading{
-        width: 24rem;
-    }
-
-    .contactus-form-container{
-        width: 26.2rem;
-    }
- 
-    #submit-btn{
-        margin: 0.6rem 5rem;
-    }
- 
-    footer{
-        width: 26.15rem;
-    }
-}
-
-@media(max-width:360px){
-
-    .nav-items{
-        padding-left: 2.2rem;
-    }
-    
-    .project-number-left{
-        left: 18rem;
-    }
-
-    .skills-container{
-        width: 25rem;
-    }
-    
-    .skill-subHeading{
-        width: 24rem;
-    }
-    
-    .contactus-form-container{
-        width: 25.5rem;
-    }
- 
-    #submit-btn{
-        margin: 0.6rem 4.6rem;
-    }
- 
-    .icon-wrapper{
-        margin-right: 0rem;
-    }
-    footer{
-        width: 25.5rem;
-    }
-}
-
-@media(max-width:350px){
-    
-    .nav-items{
-        padding-left: 1.65rem;
-    }
-
-    .project-number-left{
-        left: 17.5rem;
-    }
-
-    .skills-container{
-        margin-top: 3rem;
-        width: 22rem;
-    }
-
-    .skill-container-right{
         margin-left: 3rem;
-        width: 20rem;
-        display: flex;
-        position: relative;
-        gap: 1rem;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
+        width: 28rem;
     }
-    
-    .contactus-form-container{
-        width: 25rem;
+}
+
+@media(max-width:360px) {
+    .hero-section-left {
+        margin-left: 8rem;
     }
- 
-    footer{
-        width: 25rem;
+    .user-image img {
+        margin-left: 8rem;
     }
 }

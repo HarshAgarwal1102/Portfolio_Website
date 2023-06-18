@@ -241,11 +241,11 @@
     }
     .skill-heading{
         
-        font-size: 35px;
+        font-size: 32px;
     font-weight: 800;
     color: var(--bgOrange);
     line-height: 4rem;
-    margin-left: 4rem;
+    margin-left: 3rem;
     }
     .skill-subHeading{
         margin-top: 1rem;
@@ -338,48 +338,44 @@
 @media(max-width:390px){
 
     .hero-section-left {
-        margin-left: 1rem;
+        margin-left: 10px;
     }
     .my-image {
-    margin-left: 1rem; 
+        margin-left: 10px; 
     }
-    /* .skills-container{
-        margin-left: 0rem;
-        width: 27rem;
-        gap : 65px;
-    } */
 }
+
 @media (max-width: 380px){
     .hero-section-left {
-        margin-left: 2rem;
+        margin-left: 20px;
     }
     .my-image {
-    margin-left: 2rem; 
+        margin-left: 20px;
     }
 }
 @media (max-width: 370px){
     .hero-section-left {
-        margin-left: 3rem;
+        margin-left: 30px;
     }
     .my-image {
-    margin-left: 3rem; 
+    margin-left: 30px; 
     }
 }
 
 @media(max-width:360px) {
     .hero-section-left {
-        margin-left: 4rem;
+        margin-left: 40px;
     }
     .user-image img {
-        margin-left: 4rem;
+        margin-left: 40px;
     }
 }
 
 @media(max-width:350px) {
     .hero-section-left {
-        margin-left: 5rem;
+        margin-left: 50px;
     }
     .user-image img {
-        margin-left: 5rem;
+        margin-left: 50px;
     }
 }

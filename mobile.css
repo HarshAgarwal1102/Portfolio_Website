@@ -21,9 +21,9 @@
     }
     .nav-items{
         padding: 0px;
-    padding-left: 4.9rem;
+    padding-left: 2.2rem;
     margin: 25px;
-    gap: 1rem;
+    gap: 0.8rem;
     }
     .navbar{
         width: 10%;
@@ -67,7 +67,6 @@
     }
 
     .hero-section-left {
-        margin-left: 4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -75,7 +74,6 @@
     }
     
     .my-image{
-        margin-left: 4rem;
         width: 250px;
     }
     .user-image{
@@ -105,7 +103,7 @@
         background-color: rgb(231,231,231);
         margin-top: 4rem;
         margin-left: 0rem;
-        width: 28.4rem;
+        width: 25rem;
     }
     .project-container{
         max-width: 400px;
@@ -238,9 +236,7 @@
         flex-direction: column;
     }
     .skill-container-right{
-        width: 21rem;
-        margin-right: 0rem;
-        margin-left: 2.4rem;
+        width: 23rem;
     }
     .skill-heading{
         
@@ -252,9 +248,8 @@
     }
     .skill-subHeading{
         margin-top: 1rem;
-        
         margin-left: 3rem;
-        width: 26rem;
+        width: 23rem;
     }
     .skill-subHeading p{
         margin: 5px 0;
@@ -292,7 +287,7 @@
     .contactus-form-container{
         margin-top: 10px;
         margin-left: 0rem;
-        width: 28.4rem;
+        width: 25rem;
     }
  
     .form{
@@ -301,7 +296,7 @@
     }
     #submit-btn{
         font-size: 1rem;
-        margin: 0.6rem 6rem;
+        margin: 0.6rem 5rem;
         padding: 15px;
         border-radius: 5px;
         transition: all 0.4s;
@@ -324,12 +319,12 @@
     }
  
     .icon-wrapper{
-        margin-right: -3.5rem;
+        margin-right: 0rem;
     gap: 1rem;
     }
     footer{
         padding: 1rem;
-    width: 28.4rem;
+    width: 25rem;
     }
     .footer-wrapper{
         display: flex;
@@ -341,43 +336,49 @@
 
 @media(max-width:390px){
 
-    .skills-container{
+    .hero-section-left {
+        margin-left: 1rem;
+    }
+    .my-image {
+    margin-left: 1rem; 
+    }
+    /* .skills-container{
         margin-left: 0rem;
         width: 27rem;
         gap : 65px;
-    }
+    } */
 }
 @media (max-width: 380px){
     .hero-section-left {
-        margin-left: 5rem;
+        margin-left: 2rem;
     }
     .my-image {
-    margin-left: 5rem; 
+    margin-left: 2rem; 
     }
 }
 @media (max-width: 370px){
     .hero-section-left {
-        margin-left: 6rem;
+        margin-left: 3rem;
     }
     .my-image {
-    margin-left: 6rem; 
+    margin-left: 3rem; 
     }
 }
 
 @media(max-width:360px) {
     .hero-section-left {
-        margin-left: 6rem;
+        margin-left: 4rem;
     }
     .user-image img {
-        margin-left: 6rem;
+        margin-left: 4rem;
     }
 }
 
 @media(max-width:350px) {
     .hero-section-left {
-        margin-left: 7rem;
+        margin-left: 5rem;
     }
     .user-image img {
-        margin-left: 7rem;
+        margin-left: 5rem;
     }
 }

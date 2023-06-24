@@ -523,7 +523,7 @@ a{
     align-items: center;
     justify-content: center;
 }
-.form{
+#form{
     display: flex;
     flex-direction: column;
     gap: 30px;

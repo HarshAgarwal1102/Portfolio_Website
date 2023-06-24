@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -505,6 +506,7 @@ a{
     background-color: rgb(231,231,231);
 }
 .contactus-heading{
+    font-family: 'Permanent Marker', cursive;
     font-size: 4em;
     color: var(--bgOrange);
     padding-top: 2rem;

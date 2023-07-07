@@ -2,6 +2,7 @@ var typeData = new Typed(".role", {
     strings: [
       "Web Developer",
       "Software Developer",
+        "Problem Solver",
       "Coder",
     ],
     loop: true,

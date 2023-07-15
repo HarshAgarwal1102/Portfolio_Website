@@ -209,6 +209,18 @@
         height: 2rem;
         filter: brightness(0) invert(1);
     }
+    .html{
+        width: 1.8rem;
+        height: 2rem;
+    }
+    .css{
+        width: 1.8rem;
+        height: 2rem;
+    }
+    .js{
+        width: 1.8rem;
+        height: 2rem;
+    }
 
     .skills-container{
         margin-top: 3rem;

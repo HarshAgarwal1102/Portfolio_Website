@@ -187,95 +187,7 @@ a{
     }
 
  }
- .icon-dots{
-    z-index: 9;
-    bottom: -1rem;
-    right: 0;
-    animation-name: dotsAnimation;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
- }
- @keyframes dotsAnimation {
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(25px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
- }
- .icon-cube{
-    z-index: 9;
-    top: -0.8em;
-    right: 1em;
-    animation-name: cubeRotate;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
- }
- @keyframes cubeRotate {
-    0%{
-        transform: rotateY(0deg) translateY(0px);
-    }
-    50%{
-        transform: rotatey(180deg) translateY(-12px) ;
-    }
-    100%{
-        transform: rotatey(360deg) translateY(0px);
-    }
- }
- .icon-circle{
-    z-index: 9;
-    left: 0;
-    bottom: 0;
-    animation-name: shakeEffect;
-    animation-duration: 6s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
- }
- @keyframes shakeEffect {
-    0%{
-        
-    }
-    50%{
-        bottom: 10%;
-        left: 5%;
-    }
-    100%{
-        
-    }
-}
-.icon-zigzag{
-    z-index: 9;
-    top:1.5rem;
-    left: -0.3rem;
-    animation: zigAnimation 5s ease-in infinite;
-}
-@keyframes zigAnimation {
-    0%{
-        
-    }
-    50%{
-       top: 2%;
-        left: 5%;
-    }
-    100%{
-        
-    }
-}
-.icon-plus{
-    z-index: 9;
-    top: -0.8rem;
-    left: 50%;
-    animation: shakePlus 5s ease-in infinite;
-}
-@keyframes identifier {
-    50%{
-        top: 3%;
-        left: 48%;
-    }
-}
+
 .project-section{
     background-color: rgb(231,231,231);
     margin-top: 4rem;
@@ -607,14 +519,28 @@ footer{
 }
 .jav{
     width: 5rem;
-    height: 5.8rem
+    height: 5.8rem;
 }
 .sql{
     width: 8.5rem;
     height: 5.8rem;
     filter: brightness(0) invert(1);
 }
-
+.html{
+    width: 5rem;
+    height: 5.8rem;
+    filter: brightness(0) invert(1);
+}
+.css{
+    width: 5rem;
+    height: 5.8rem;
+    filter: brightness(0) invert(1);
+}
+.js{
+    width: 5rem;
+    height: 5.8rem;
+    filter: brightness(0) invert(1);
+}
 
 @media(max-width:1597px){
     .container{

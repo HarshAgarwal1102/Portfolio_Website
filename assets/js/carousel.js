@@ -1,6 +1,11 @@
-// About-section photo carousel: swipe/scroll-snap track, prev/next, dots and an
-// auto-advance that pauses on hover, focus, when off-screen, when the tab is hidden,
-// and by default for visitors who prefer reduced motion.
+// About-section photo carousel: a swipe/scroll-snap track with no visible controls.
+// It auto-advances and pauses on hover, focus, when off-screen, when the tab is hidden,
+// and by default for visitors who prefer reduced motion. Keyboard users get arrow keys
+// and a pause button that appears when focused.
+//
+// Looping: a decorative copy of the first slide sits after the last one. Moving past the
+// last photo scrolls forward onto that copy, then jumps (invisibly) back to the real
+// first photo, so the slideshow always moves in one direction instead of rewinding.
 
 export function initCarousel() {
   const root = document.querySelector('[data-carousel]');
@@ -8,7 +13,7 @@ export function initCarousel() {
 
   const track = root.querySelector('[data-carousel-track]');
   const slides = [...track.children];
-  const dots = [...root.querySelectorAll('[data-slide-to]')];
+  const count = slides.length;
   const toggle = root.querySelector('[data-carousel-toggle]');
   const iconPause = toggle.querySelector('[data-icon-pause]');
   const iconPlay = toggle.querySelector('[data-icon-play]');
@@ -27,20 +32,52 @@ export function initCarousel() {
     img.style.objectPosition = img.dataset.pos;
   }
 
-  function render() {
-    dots.forEach((dot, i) => {
-      if (i === index) dot.setAttribute('aria-current', 'true');
-      else dot.removeAttribute('aria-current');
+  // Loop copy of the first slide: hidden from assistive tech, never counted.
+  const loopCopy = slides[0].cloneNode(true);
+  loopCopy.removeAttribute('role');
+  loopCopy.removeAttribute('aria-roledescription');
+  loopCopy.removeAttribute('aria-label');
+  loopCopy.setAttribute('aria-hidden', 'true');
+  const copyImg = loopCopy.querySelector('img');
+  copyImg.alt = '';
+  copyImg.style.objectPosition = copyImg.dataset.pos ?? '';
+  track.append(loopCopy);
+
+  const width = () => track.clientWidth;
+
+  function scrollToPosition(position, smooth) {
+    track.scrollTo({
+      left: position * width(),
+      behavior: smooth && !reducedMotion.matches ? 'smooth' : 'instant',
     });
+  }
+
+  function render() {
     slides.forEach((slide, i) => slide.setAttribute('aria-hidden', String(i !== index)));
   }
 
-  function goTo(i, smooth = true) {
-    index = (i + slides.length) % slides.length;
-    track.scrollTo({
-      left: index * track.clientWidth,
-      behavior: smooth && !reducedMotion.matches ? 'smooth' : 'auto',
-    });
+  function next() {
+    if (index === count - 1) {
+      // Scroll forward onto the copy of photo 1; the scroll-end handler swaps in the real one.
+      index = 0;
+      scrollToPosition(count, true);
+      if (reducedMotion.matches) scrollToPosition(0, false);
+    } else {
+      index += 1;
+      scrollToPosition(index, true);
+    }
+    render();
+  }
+
+  function previous() {
+    if (index === 0) {
+      // Jump onto the copy (it looks identical to photo 1), then move back to the last photo.
+      scrollToPosition(count, false);
+      index = count - 1;
+    } else {
+      index -= 1;
+    }
+    scrollToPosition(index, true);
     render();
   }
 
@@ -52,7 +89,7 @@ export function initCarousel() {
     window.clearTimeout(timer);
     timer = null;
     if (shouldPlay()) timer = window.setTimeout(() => {
-      goTo(index + 1);
+      next();
       schedule();
     }, interval);
   }
@@ -65,32 +102,27 @@ export function initCarousel() {
     track.setAttribute('aria-live', userPaused ? 'polite' : 'off');
   }
 
-  // Keep `index` in sync when the visitor swipes or scrolls the track directly.
+  // When scrolling settles: swap the loop copy for the real first photo, and keep
+  // `index` in sync when the visitor swipes or scrolls the track directly.
   let scrollEnd = null;
   track.addEventListener('scroll', () => {
     window.clearTimeout(scrollEnd);
     scrollEnd = window.setTimeout(() => {
-      const next = Math.round(track.scrollLeft / track.clientWidth);
-      if (next !== index) {
-        index = next;
+      const position = Math.round(track.scrollLeft / width());
+      if (position >= count) {
+        scrollToPosition(0, false);
+        if (index !== 0) {
+          index = 0;
+          render();
+          schedule();
+        }
+      } else if (position !== index) {
+        index = position;
         render();
         schedule();
       }
-    }, 80);
+    }, 120);
   }, { passive: true });
-
-  root.querySelector('[data-carousel-prev]').addEventListener('click', () => {
-    goTo(index - 1);
-    schedule();
-  });
-  root.querySelector('[data-carousel-next]').addEventListener('click', () => {
-    goTo(index + 1);
-    schedule();
-  });
-  dots.forEach((dot) => dot.addEventListener('click', () => {
-    goTo(Number(dot.dataset.slideTo));
-    schedule();
-  }));
 
   toggle.addEventListener('click', () => {
     userPaused = !userPaused;
@@ -99,8 +131,8 @@ export function initCarousel() {
   });
 
   track.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowRight') goTo(index + 1);
-    else if (event.key === 'ArrowLeft') goTo(index - 1);
+    if (event.key === 'ArrowRight') next();
+    else if (event.key === 'ArrowLeft') previous();
     else return;
     event.preventDefault();
   });
@@ -121,7 +153,7 @@ export function initCarousel() {
     schedule();
   }, { threshold: 0.4 }).observe(root);
 
-  window.addEventListener('resize', () => goTo(index, false));
+  window.addEventListener('resize', () => scrollToPosition(index, false));
 
   updateToggle();
   render();

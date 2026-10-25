@@ -945,80 +945,33 @@ button {
   object-fit: cover;
 }
 
-.carousel__controls {
+/* Pause control: hidden until a keyboard user tabs to it (hover already pauses). */
+.carousel__pause {
   position: absolute;
-  left: var(--space-3);
+  top: var(--space-3);
   right: var(--space-3);
-  bottom: var(--space-3);
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: 4px;
-  border-radius: 999px;
-  background: rgba(7, 11, 20, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.carousel__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: none;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 0;
-  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(7, 11, 20, 0.75);
   color: var(--text);
-  transition: background-color var(--dur) var(--ease);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease);
 }
 
-.carousel__btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+.carousel__pause:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.carousel__btn svg {
+.carousel__pause svg {
   width: 18px;
   height: 18px;
-}
-
-.carousel__dots {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-}
-
-.carousel__dot {
-  position: relative;
-  width: 28px;
-  height: 40px;
-  border: 0;
-  background: transparent;
-}
-
-.carousel__dot::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.45);
-  transform: translate(-50%, -50%);
-  transition: width var(--dur) var(--ease), background-color var(--dur) var(--ease);
-}
-
-.carousel__dot[aria-current="true"]::before {
-  width: 20px;
-  background: var(--accent);
-}
-
-.carousel__dot:focus-visible {
-  outline-offset: -4px;
 }
 
 .about__photo figcaption {

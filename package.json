@@ -10,6 +10,6 @@
   "scripts": {
     "start": "python3 -m http.server 8080",
     "check": "node scripts/check-site.mjs",
-    "test": "node --test tests/"
+    "test": "node --test tests/*.test.mjs"
   }
 }

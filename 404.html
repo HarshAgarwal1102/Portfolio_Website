@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#070b14">
+  <title>Page not found · Harsh Agarwal</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1422'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='monospace' font-size='28' font-weight='700' fill='%235ad1ff'%3Eha%3C/text%3E%3C/svg%3E">
+  <!-- Self-contained on purpose: this page can be served from any nested path, where relative asset URLs would break. -->
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 32px 16px;
+      background-color: #070b14;
+      background-image:
+        linear-gradient(rgba(125, 216, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(125, 216, 255, 0.045) 1px, transparent 1px);
+      background-size: 48px 48px;
+      color: #e6edf7;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    main { width: 100%; max-width: 640px; display: grid; gap: 24px; }
+    .eyebrow { margin: 0; font: 500 13px/1.4 ui-monospace, Menlo, Consolas, monospace; color: #5ad1ff; }
+    h1 { margin: 0; font-size: clamp(28px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.02em; }
+    p { margin: 0; color: #b4c0d3; font-size: 17px; }
+    pre {
+      margin: 0;
+      padding: 18px 20px;
+      border-radius: 14px;
+      border: 1px solid #1e2a3f;
+      background: #0a0f1a;
+      font: 13.5px/1.75 ui-monospace, Menlo, Consolas, monospace;
+      color: #c8d3e3;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .p { color: #5ad1ff; } .m { color: #8b9bb4; } .w { color: #fbbf24; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    a.btn {
+      display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px;
+      border-radius: 10px; font-weight: 600; text-decoration: none;
+    }
+    a.primary { background: #5ad1ff; color: #04121c; }
+    a.primary:hover { background: #8fe0ff; }
+    a.secondary { border: 1px solid #2a3a55; color: #e6edf7; }
+    a.secondary:hover { border-color: rgba(90, 209, 255, 0.45); }
+    a:focus-visible { outline: 2px solid #5ad1ff; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">HTTP 404</p>
+    <h1>This resource isn't in the state file.</h1>
+    <pre aria-label="Illustrative terminal output"><span class="p">$</span> terraform state show this_page
+<span class="w">Error: No instance found for the given address</span>
+<span class="m">  The page may have moved, or the link may be mistyped.</span></pre>
+    <p>The page you're looking for doesn't exist. The portfolio is one page, so everything is reachable from the homepage.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://harshagarwal-portfolio.netlify.app/">Back to the homepage</a>
+      <a class="btn secondary" href="https://harshagarwal-portfolio.netlify.app/#projects">See projects</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,273 +1,993 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta property="og:image" content="https://github.com/HarshAgarwal1102/Portfolio_Website/assets/117922914/5c34794e-023f-4be4-a22f-34956e9f251a">
-  <meta property="og:title" content="Harsh Agarwal's Portfolio Website">
-  <meta property="og:description" content="Hey There... I am a Software Developer and a Front End Engineer">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mobile.css">
-  <link rel="shortcut icon" href="./userAsset/NavLogo.jpg" type="image/x-icon">
-  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io mailto:; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Harsh Agarwal — DevOps Engineer · Azure, Terraform &amp; CI/CD</title>
+  <meta name="description" content="Harsh Agarwal is a DevOps engineer building Azure infrastructure with Terraform, secure GitHub Actions pipelines and drift detection tooling. Projects, architecture and contact.">
+  <meta name="author" content="Harsh Agarwal">
+  <meta name="theme-color" content="#070b14">
+  <link rel="canonical" href="https://harshagarwal-portfolio.netlify.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Harsh Agarwal">
+  <meta property="og:title" content="Harsh Agarwal — DevOps Engineer">
+  <meta property="og:description" content="Azure infrastructure, Terraform and CI/CD pipelines that catch drift, secrets and misconfiguration before production does.">
+  <meta property="og:url" content="https://harshagarwal-portfolio.netlify.app/">
+  <meta property="og:image" content="https://harshagarwal-portfolio.netlify.app/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Harsh Agarwal — DevOps Engineer. Engineering reliable cloud infrastructure through automation.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/main.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harsh Agarwal",
+    "jobTitle": "DevOps Engineer",
+    "url": "https://harshagarwal-portfolio.netlify.app/",
+    "worksFor": { "@type": "Organization", "name": "Hansa Solutions India Pvt Ltd" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "DIT University" },
+    "knowsAbout": ["Microsoft Azure", "Terraform", "GitHub Actions", "DevSecOps", "Infrastructure as Code"],
+    "sameAs": [
+      "https://github.com/HarshAgarwal1102",
+      "https://www.linkedin.com/in/harsh4404/",
+      "https://medium.com/@harshagarwal2225"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div id="wrappr">
-    <div class="container">
-<!-- ----------------------- NAVBAR ------------------------- -->
-      <div class="navbar">
-        <div class="logo-container">
-          <img src="./userAsset/NavLogo.jpg" class="logo">
-          <div class="logo-text">arsh Agarwal</div>
-        </div>
-        <div class="nav-items">
-          <div><a href="#project">Projects</a></div>
-          <div><a href="#skills">Skills</a></div>
-          <div><a href="#contact">ContactMe</a></div>
-        </div>
+  <!-- Icon sprite (stroke icons, 24px grid) -->
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-medium" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="12" r="5"/><ellipse cx="16" cy="12" rx="2.2" ry="5"/><path d="M21 7.5v9"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-workflow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect x="13" y="13" width="8" height="8" rx="2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4M16.71 13.88l.7.71-2.82 2.82"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-pr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7M6 9v12"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 14 9-14 9V3z"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-gate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7z"/><path d="M22 19H2"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 12h10"/></symbol>
+    <symbol id="i-issue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="9" r="3"/><path d="M6 9v6M18 12c0 3-3 4-9 5"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#home">
+        <span class="brand__mark" aria-hidden="true">ha</span>
+        <span>Harsh Agarwal</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#architecture">Architecture</a></li>
+          <li><a class="nav__link" href="#learning">Learning</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
       </div>
-<!-- ------------------------------------------------------- -->
-      <div class="hero-section">
-        <div class="absolute faded-text">Harsh Agarwal</div>
-        <div class="hero-section-left">
-          <div class="hero-section-heading">Hii!! Welcome</div>
-          <div class="hero-section-sub-heading hero-section-heading">
-            I am a <span class="role"></span>
-          </div>
-          <div class="hero-section-description">
-            Here you'll get to know about my journey as an Engineer. You can go through my portfolio and suggest me if
-            anything is required to be furnished.
-          </div>
-          <a id="btn" class="btn-pink" href="mailto:harshagarwal.4404@gmail.com" target="_blank">Hire Me</a>
-        </div>
-        <div class="hero-section-right">
-          <div class="user-image">
-            <img src="./userAsset/UserImage.jpg" alt="" class="my-image" />
-          </div>
-        </div>
-      </div>
+    </nav>
+  </header>
 
-    </div>
+  <main id="main" tabindex="-1">
+    <!-- =============================== HERO =============================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="status-pill"><span class="status-pill__dot" aria-hidden="true"></span>Open to DevOps · Cloud · Platform roles</p>
 
-    <div class="project-section" id="project">
+          <h1 class="hero__title" id="hero-title">Engineering reliable cloud infrastructure through <em>automation.</em></h1>
 
-      <h2 class="page-header">Projects</h2>
-      <div class="project-container">
-
-        <div class="project-card" id="project1">
-          <div class="project-number project-number-right">01</div>
-          <div class="project-content project-content-left">
-            <div class="project-skills-container">
-              <i class="fa-brands fa-java java-icon" style="color: white"></i>
-              <img class="project-skill jav" src="./icon/jav.png" alt="" />
-            </div>
-            <h2 class="project-heading">Street Fighter Game</h2>
-            <div class="project-subHeading">Build this game by using just basic concept of Java that follows
-              basic OOPs and followed SOLID Principle.
-            </div>
-            <div class="btn-grp">
-              <a href="https://medium.com/@harshagarwal2225/6c506ead9dbe" target="_blank">
-                <button class="btn-pink btn-project">Read More</button>
-              </a>
-              <a href="https://github.com/king4404/Street_Fighter" target="_blank"><i title="GitHubLink"
-                  class="fa-brands fa-github icon"></i>
-              </a>
-              <a href="">
-                <i title="Live Link" class="fa-solid fa-link icon"></i>
-              </a>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" id="project2">
-          <div class="project-number project-number-left">02</div>
-          <div class="project-content project-content-right">
-            <div class="project-skills-container">
-              <img class="project-skill html" src="./icon/html.svg" alt="" />
-              <img class="project-skill css" src="./icon/css.svg" alt="" />
-              <img class="project-skill js" src="./icon/js.svg" alt="" />
-            </div>
-            <h2 class="project-heading">Breaking Copyrights</h2>
-            <div class="project-subHeading">
-              A platform to play copyrights free music untill you fresh out yourself.
-            </div>
-            <div class="btn-grp">
-
-              <!-- <button class="btn-pink btn-project">Read More</button> -->
-
-              <a href="https://github.com/king4404/Music_Player" target="_blank"><i title="GitHubLink"
-                  class="fa-brands fa-github icon"></i>
-              </a>
-              <a href="https://king4404.github.io/Music_Player/">
-                <i title="Live Link" class="fa-solid fa-link icon"></i>
-              </a>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" id="project3">
-          <div class="project-number project-number-right">03</div>
-          <div class="project-content project-content-left">
-            <div class="project-skills-container">
-              <i class="fa-brands fa-java java-icon" style="color: white"></i>
-              <img class="project-skill sql" src="./icon/Mysql.png" alt="" />
-            </div>
-            <h2 class="project-heading">MultiUser Chat App</h2>
-            <div class="project-subHeading">Created a multiuser chat app in Java, providing real-time communication and
-              collaboration among multiple users.
-            </div>
-            <div class="btn-grp">
-
-              <a href="https://medium.com/@harshagarwal2225/646c9a19ff6b" target="_blank">
-                <button class="btn-pink btn-project">Read More</button>
-              </a>
-
-              <a href="https://github.com/king4404/MultiUser_Chat_App" target="_blank"><i title="GitHubLink"
-                  class="fa-brands fa-github icon"></i>
-              </a>
-              <a href="">
-                <i title="Live Link" class="fa-solid fa-link icon"></i>
-              </a>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" id="project4">
-          <div class="project-number project-number-left">04</div>
-          <div class="project-content project-content-right">
-            <div class="project-skills-container">
-              <i class="fa-brands fa-java java-icon" style="color: white"></i>
-              <img class="project-skill jav" src="./icon/jav.png" alt="" />
-            </div>
-            <h2 class="project-heading">TicTacToe Game</h2>
-            <div class="project-subHeading">Created this 2D responsive game using Swing-GUI
-            </div>
-            <div class="btn-grp">
-
-              <a href="https://medium.com/@harshagarwal2225/1a1351c327fd" target="_blank">
-                <button class="btn-pink btn-project">Read More</button>
-              </a>
-
-             <a href="https://github.com/king4404/TicTacToe-Game" target="_blank"><i title="GitHubLink"
-                  class="fa-brands fa-github icon"></i>
-              </a>
-              <a href="./projects/TicTacToe.jar">
-                <i title="Play Game" class="fa-solid fa-link icon"></i>
-              </a>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div id="skills" class="container skills-container">
-      <div class="skill-fade-text">Skills</div>
-
-      <div class="skill-container-left">
-        <h2 class="skill-heading">
-          <span class="caps">M</span>e and
-          <br />
-          MyTech Stack
-        </h2>
-
-        <div class="skill-subHeading">
-          <p>
-            Hi Everyone My name is Harsh Agarwal I am a dedicated student currently pursuing my fourth year of studies in DIT University. Alongside my
-            academic pursuits, I have developed a strong passion for Front End Development and Software Development.
-            Through various projects, I have honed my skills in creating dynamic and visually appealing web
-            applications.
+          <p class="hero__intro">
+            I'm <strong>Harsh Agarwal</strong>, a DevOps engineer working on <strong>Azure</strong> with
+            <strong>Terraform</strong>. I build CI/CD pipelines that catch drift, leaked secrets and
+            misconfiguration early, and I keep infrastructure state honest.
           </p>
-          <p>
-            With an innovative mindset and attention to detail, I consistently strive to deliver seamless
-            user experiences. Actively engaged in enhancing my skills, I am currently working on challenging projects
-            that provide opportunities for growth and allow me to stay abreast of the latest industry trends.
+
+          <p class="role-line">
+            <span class="visually-hidden">Focus areas: Azure infrastructure, Terraform and Infrastructure as Code, CI/CD with GitHub Actions, DevSecOps automation, drift detection.</span>
+            <span aria-hidden="true">focus:</span>
+            <span class="role-line__value" data-roles='["Azure infrastructure","Terraform & IaC","CI/CD with GitHub Actions","DevSecOps automation","Drift detection"]' aria-hidden="true">Azure infrastructure</span><span class="role-line__caret" aria-hidden="true"></span>
           </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">
+              Explore my work
+              <svg aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+            <a class="btn btn--secondary" href="https://drive.google.com/file/d/1NM0YT_uRSXG6S4tKwD47B3GF6WAhz4dG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" data-resume-link>
+              <svg aria-hidden="true"><use href="#i-file"/></svg>
+              Download résumé
+              <span class="visually-hidden">(PDF, opens in a new tab)</span>
+            </a>
+            <div class="hero__social">
+              <a class="icon-btn" href="https://github.com/HarshAgarwal1102" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
+                <svg aria-hidden="true"><use href="#i-github"/></svg>
+              </a>
+              <a class="icon-btn" href="https://www.linkedin.com/in/harsh4404/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+                <svg aria-hidden="true"><use href="#i-linkedin"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <figure class="terminal hero__terminal" aria-labelledby="terminal-caption">
+          <div class="terminal__bar">
+            <span class="terminal__dot" aria-hidden="true"></span>
+            <span class="terminal__dot" aria-hidden="true"></span>
+            <span class="terminal__dot" aria-hidden="true"></span>
+            <span class="terminal__title">~/ai-terraform-drift-detector</span>
+            <button class="terminal__replay" type="button" data-terminal-replay hidden>
+              <svg aria-hidden="true"><use href="#i-replay"/></svg><span>Replay</span>
+            </button>
+          </div>
+<pre class="terminal__body" data-terminal><span class="t-prompt">$</span> terraform fmt -check -recursive
+<span class="t-muted">  formatting clean</span>
+<span class="t-prompt">$</span> ./scripts/run_tflint.sh &amp;&amp; ./scripts/run_trivy_config.sh
+<span class="t-ok">  ✓ TFLint: no issues</span>
+<span class="t-ok">  ✓ Trivy: 0 HIGH / CRITICAL (accepted risks tracked)</span>
+<span class="t-prompt">$</span> terraform plan -detailed-exitcode -out=tfplan
+<span class="t-muted">  exit 2 → pending changes, classification decides</span>
+<span class="t-prompt">$</span> drift-engine analyze --plan plan.json --format console
+<span class="t-key">  azurerm_resource_group.main</span>  <span class="t-warn">external drift</span>
+<span class="t-muted">    tags.owner: "platform" → "manual-edit"</span>
+<span class="t-ok">  report written · 1 issue opened · sensitive values redacted</span></pre>
+          <figcaption class="terminal__caption" id="terminal-caption">Illustrative session based on commands from my drift-detector repository. Not live output.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =============================== ABOUT =============================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__intro reveal">
+            <div class="section-head">
+              <p class="eyebrow">01 / about</p>
+              <h2 class="section-title" id="about-title">A software engineer who now automates infrastructure.</h2>
+            </div>
+            <div class="about__photo">
+              <img src="assets/img/harsh-agarwal.jpg" width="176" height="176" alt="Portrait of Harsh Agarwal outdoors in the mountains" loading="lazy" decoding="async">
+              <p><strong>Harsh Agarwal</strong>Uttar Pradesh, India · Azure-first</p>
+            </div>
+          </div>
+
+          <div class="about__body reveal">
+            <p>
+              I have around 2–3 years of software engineering experience and I'm now focused on DevOps.
+              Most of my work happens in <strong>Azure</strong>: Terraform for infrastructure, GitHub Actions
+              for delivery, and security scanning and validation that run on every change.
+            </p>
+            <p>
+              I like the unglamorous parts done well. That means plans you can trust, pipeline identities with
+              only the permissions they need, and checks that fail loudly instead of passing silently. My drift
+              detector is where I practise this in the open, with every phase documented and backed by evidence.
+            </p>
+            <dl class="facts">
+              <div class="fact"><dt>Currently</dt><dd>Hansa Solutions India Pvt Ltd</dd></div>
+              <div class="fact"><dt>Primary stack</dt><dd>Azure · Terraform · GitHub Actions</dd></div>
+              <div class="fact"><dt>Education</dt><dd>B.Tech CSE, DIT University (2024)</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <ul class="principles">
+          <li class="principle reveal">
+            <svg aria-hidden="true"><use href="#i-workflow"/></svg>
+            <h3>Automate the repeatable</h3>
+            <p>If a check matters, it runs in CI on every push, not from memory before a release.</p>
+          </li>
+          <li class="principle reveal">
+            <svg aria-hidden="true"><use href="#i-shield"/></svg>
+            <h3>Secure by default</h3>
+            <p>OIDC over stored secrets, SHA-pinned actions, least-privilege roles and secret scanning across Git history.</p>
+          </li>
+          <li class="principle reveal">
+            <svg aria-hidden="true"><use href="#i-check"/></svg>
+            <h3>Reliable over clever</h3>
+            <p>Deterministic results first. A failed run reports "unknown", never "no drift".</p>
+          </li>
+          <li class="principle reveal">
+            <svg aria-hidden="true"><use href="#i-compass"/></svg>
+            <h3>Keep improving</h3>
+            <p>Small reviewed pull requests, written decisions, and honest notes on what isn't built yet.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =============================== SKILLS =============================== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">02 / skills</p>
+          <h2 class="section-title" id="skills-title">Toolchain</h2>
+          <p class="lede">Grouped by the job they do. Everything here is used in my public repositories or listed on my GitHub profile. I don't use percentage bars.</p>
+        </div>
+
+        <div class="skills__grid">
+          <article class="card card--pad skill-group reveal">
+            <div class="skill-group__head">
+              <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-cloud"/></svg></span>
+              <h3>Cloud &amp; Azure</h3>
+            </div>
+            <ul class="chip-list">
+              <li class="chip">Microsoft Azure</li>
+              <li class="chip">Azure Resource Manager</li>
+              <li class="chip">VNet · Subnets · NSG</li>
+              <li class="chip">Entra ID &amp; RBAC</li>
+              <li class="chip">Azure Policy</li>
+              <li class="chip">Key Vault</li>
+              <li class="chip">Bastion · Load Balancer · App Gateway</li>
+            </ul>
+          </article>
+
+          <article class="card card--pad skill-group reveal">
+            <div class="skill-group__head">
+              <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-layers"/></svg></span>
+              <h3>Infrastructure as Code</h3>
+            </div>
+            <ul class="chip-list">
+              <li class="chip">Terraform</li>
+              <li class="chip">Reusable modules</li>
+              <li class="chip">Remote state (azurerm backend)</li>
+              <li class="chip">Multi-environment layouts</li>
+              <li class="chip">Drift detection</li>
+              <li class="chip">Bicep</li>
+            </ul>
+          </article>
+
+          <article class="card card--pad skill-group reveal">
+            <div class="skill-group__head">
+              <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-workflow"/></svg></span>
+              <h3>CI/CD &amp; automation</h3>
+            </div>
+            <ul class="chip-list">
+              <li class="chip">GitHub Actions</li>
+              <li class="chip">OIDC workload identity</li>
+              <li class="chip">Azure DevOps</li>
+              <li class="chip">Git &amp; GitHub</li>
+              <li class="chip">Bash</li>
+              <li class="chip">PowerShell</li>
+              <li class="chip">Python</li>
+            </ul>
+          </article>
+
+          <article class="card card--pad skill-group reveal">
+            <div class="skill-group__head">
+              <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-shield"/></svg></span>
+              <h3>DevSecOps</h3>
+            </div>
+            <ul class="chip-list">
+              <li class="chip">TFLint</li>
+              <li class="chip">Trivy (config)</li>
+              <li class="chip">TruffleHog</li>
+              <li class="chip">Gitleaks</li>
+              <li class="chip">SHA-pinned actions</li>
+              <li class="chip">Least-privilege identities</li>
+            </ul>
+          </article>
+
+          <article class="card card--pad skill-group reveal">
+            <div class="skill-group__head">
+              <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-coins"/></svg></span>
+              <h3>FinOps &amp; investigation</h3>
+            </div>
+            <ul class="chip-list">
+              <li class="chip">Infracost</li>
+              <li class="chip">Azure Retail Prices API</li>
+              <li class="chip">Azure Activity Log</li>
+              <li class="chip">GitHub Issues automation</li>
+            </ul>
+          </article>
+
+          <article class="card card--pad skill-group reveal">
+            <div class="skill-group__head">
+              <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-box"/></svg></span>
+              <h3>Containers, testing &amp; AI tooling</h3>
+            </div>
+            <ul class="chip-list">
+              <li class="chip">Docker</li>
+              <li class="chip">Kubernetes (fundamentals)</li>
+              <li class="chip">pytest</li>
+              <li class="chip">Pydantic</li>
+              <li class="chip">LangGraph</li>
+            </ul>
+          </article>
         </div>
       </div>
-      <div class="skill-container-right">
-        <img src="./userAsset/blob vector.png" class="blob-style" alt="" />
+    </section>
 
-        <img src="./icon/HTML.png " alt="" class="skills-logo" />
-        <img src="./icon/CSS.png" alt="" class="skills-logo" />
-        <img src="./icon/Javascript.svg" alt="" class="skills-logo" />
-        <img src="./icon/C++.png" alt="" class="skills-logo" />
-        <img src="./icon/php.png" alt="" class="skills-logo" />
-        <img src="./icon/Mysql.png" alt="" class="skills-logo" />
-        <img src="./icon/Github.svg" alt="" class="skills-logo" />
-        <img src="./icon/java.png" alt="" class="skills-logo" />
-        
+    <!-- =============================== EXPERIENCE =============================== -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 / experience</p>
+          <h2 class="section-title" id="experience-title">Experience &amp; path</h2>
+          <p class="lede">Professional roles and independent DevOps project work are marked separately.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item timeline__item--current reveal">
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <article class="card card--pad timeline__card">
+              <div class="timeline__meta">
+                <span>Mar 2024 — Present</span>
+                <span class="badge badge--info">Professional</span>
+              </div>
+              <h3 class="timeline__title">DevSecOps &amp; Cloud Engineer <span class="timeline__org">· Hansa Solutions India Pvt Ltd</span></h3>
+              <p>
+                Software engineering role that has moved steadily toward infrastructure work: Azure,
+                Terraform, CI/CD workflows, security scanning and infrastructure validation.
+              </p>
+              <ul class="chip-list">
+                <li class="chip chip--mono">Azure</li>
+                <li class="chip chip--mono">Terraform</li>
+                <li class="chip chip--mono">CI/CD</li>
+                <li class="chip chip--mono">Security scanning</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item timeline__item--project reveal">
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <article class="card card--pad timeline__card">
+              <div class="timeline__meta">
+                <span>2026</span>
+                <span class="badge badge--planned">Independent projects</span>
+              </div>
+              <h3 class="timeline__title">DevOps engineering in public</h3>
+              <ul class="list">
+                <li>Built and released <strong>Level 1</strong> of the AI-powered Terraform drift detector (tag <code>level1-v1.0.0</code>, Oct 2026). Each completed phase was closed on evidence from real CI runs and Azure tests.</li>
+                <li>Built a modular <strong>Azure landing zone</strong> in Terraform: nine modules, preprod and prod environments, and a bootstrap → plan → apply pipeline.</li>
+                <li>Writing about Azure governance and Terraform at scale on Medium.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <article class="card card--pad timeline__card">
+              <div class="timeline__meta">
+                <span>Graduated 2024</span>
+                <span class="badge badge--muted">Education</span>
+              </div>
+              <h3 class="timeline__title">B.Tech, Computer Science &amp; Engineering <span class="timeline__org">· DIT University</span></h3>
+              <p>CGPA 8.56 / 10. Built a foundation in Java, data structures, SQL and web development.</p>
+            </article>
+          </li>
+
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true"></span>
+            <article class="card card--pad timeline__card">
+              <div class="timeline__meta">
+                <span>2023</span>
+                <span class="badge badge--muted">Virtual internships</span>
+              </div>
+              <h3 class="timeline__title">Oasis Infobyte &amp; Bharat Intern</h3>
+              <p>
+                Completed internship task tracks: Java applications (ATM interface, reservation system, library
+                management, online examination) and front-end tasks. All source code is public on my GitHub.
+              </p>
+            </article>
+          </li>
+        </ol>
       </div>
-    </div>
+    </section>
 
-    <div class="contactus-form-container">
-      <div class="container form-content">
+    <!-- =============================== PROJECTS =============================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <p class="eyebrow">04 / projects</p>
+            <h2 class="section-title" id="projects-title">Featured engineering</h2>
+            <p class="lede">Real repositories. Numbers come from each project's own CI records, and anything not built yet is labelled as such.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects by category" data-filters>
+            <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter" type="button" data-filter="terraform" aria-pressed="false">Terraform</button>
+            <button class="filter" type="button" data-filter="cicd" aria-pressed="false">CI/CD</button>
+            <button class="filter" type="button" data-filter="devsecops" aria-pressed="false">DevSecOps</button>
+            <button class="filter" type="button" data-filter="software" aria-pressed="false">Software</button>
+          </div>
+        </div>
 
-        <h1 class="contactus-heading" id="contact">LET's TALK</h1>
-        <h3 class="contactus-sub-heading">Questions, thoughts, or just want to say hello?</h3>
-        <div class="contactus-form-container">
-          <form action="" method="POST" id="form">
-            <div class="formfeild-container">
-              <input type="text" name="name" id="name" class="formfeild" placeholder="Enter your name">
-              <input type="email" name="email" id="email" class="formfeild" placeholder="Enter your email">
-              <input type="text" name="subject" id="subject" class="formfeild" placeholder="Enter your subject">
+        <p class="visually-hidden" aria-live="polite" data-filter-status></p>
 
-              <textarea name="message" id="text" cols="30" rows="10" class="formfeild formfeild-textarea"
-                placeholder="Enter you message"></textarea>
+        <div class="projects__grid" data-projects>
+          <!-- Featured: drift detector -->
+          <article class="card project project--featured reveal" data-tags="terraform cicd devsecops" aria-labelledby="p-drift-title">
+            <div class="project__body">
+              <div class="project__top">
+                <span class="project__kicker">terraform · azure · python · github actions</span>
+                <span class="badge badge--ok">level1-v1.0.0 released</span>
+              </div>
+              <h3 class="project__title" id="p-drift-title">AI-powered Terraform drift detector</h3>
+              <p class="project__desc">
+                Finds out when Azure no longer matches Terraform and explains what changed, who changed it and
+                what it costs. It never runs <code>apply</code>.
+              </p>
+              <p class="project__problem"><strong>Problem:</strong> manual portal edits, failed deployments and policy overrides make real infrastructure drift silently away from code and state.</p>
+              <ul class="proof" aria-label="Verified results from the project's CI">
+                <li><strong>2,885</strong><span>automated tests</span></li>
+                <li><strong>98.85%</strong><span>drift-engine coverage</span></li>
+                <li><strong>135</strong><span>end-to-end scenarios</span></li>
+                <li><strong>6</strong><span>required checks on main</span></li>
+              </ul>
+              <div class="project__actions">
+                <button class="btn btn--primary btn--sm" type="button" data-open-project="drift" aria-haspopup="dialog">
+                  Read case study
+                  <svg aria-hidden="true"><use href="#i-arrow-right"/></svg>
+                </button>
+                <a class="btn btn--secondary btn--sm" href="https://github.com/HarshAgarwal1102/ai-terraform-drift-detector" target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true"><use href="#i-github"/></svg>
+                  Repository<span class="visually-hidden"> (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+            <div class="project__visual" aria-label="Simplified drift detection flow">
+              <p class="project__visual-label">// detection flow (read-only)</p>
+              <ol class="flow">
+                <li class="flow__step">schedule · daily 02:00 UTC <small>or manual</small></li>
+                <li class="flow__step flow__step--key">terraform plan -detailed-exitcode <small>OIDC</small></li>
+                <li class="flow__step">drift engine → classified report <small>redacted</small></li>
+              </ol>
+              <div class="flow__fan">
+                <span>GitHub issue</span>
+                <span>AI report</span>
+                <span>cost</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Landing zone -->
+          <article class="card card--pad project reveal" data-tags="terraform cicd" aria-labelledby="p-lz-title">
+            <div class="project__top">
+              <span class="project__kicker">terraform · azurerm 4.x</span>
+              <span class="badge badge--ok">public repo</span>
+            </div>
+            <h3 class="project__title" id="p-lz-title">Azure infrastructure landing zone</h3>
+            <p class="project__desc">Nine reusable Terraform modules composed into separate preprod and prod environments, with remote state in Azure Storage.</p>
+            <p class="project__problem"><strong>Problem:</strong> copy-pasted resource blocks drift apart between environments, and you can't review them as one design.</p>
+            <ul class="project__module-grid" aria-label="Terraform modules">
+              <li>resource_group</li><li>virtual_network</li><li>subnet</li>
+              <li>public_ip</li><li>bastion</li><li>key_vault</li>
+              <li>virtual_machine</li><li>load_balancer</li><li>app_gateway</li>
+            </ul>
+            <div class="project__actions">
+              <button class="btn btn--primary btn--sm" type="button" data-open-project="landing-zone" aria-haspopup="dialog">
+                Details <svg aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </button>
+              <a class="btn btn--secondary btn--sm" href="https://github.com/HarshAgarwal1102/Azure-Infra-Landing-Zone" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#i-github"/></svg>
+                Repository<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Portfolio as code -->
+          <article class="card card--pad project reveal" data-tags="cicd devsecops" aria-labelledby="p-site-title">
+            <div class="project__top">
+              <span class="project__kicker">html · css · javascript · github actions</span>
+              <span class="badge badge--ok">this site</span>
+            </div>
+            <h3 class="project__title" id="p-site-title">Portfolio as code</h3>
+            <p class="project__desc">The site you're reading. It's a framework-free static site with a strict Content Security Policy and no client-side secrets, checked in CI before it deploys.</p>
+            <p class="project__problem"><strong>Problem:</strong> the old version shipped an email-service token in browser JavaScript. I removed it and moved delivery to a provider-side form service.</p>
+            <ul class="chip-list">
+              <li class="chip chip--mono">link &amp; asset checker</li>
+              <li class="chip chip--mono">secret pattern scan</li>
+              <li class="chip chip--mono">node --test</li>
+            </ul>
+            <div class="project__actions">
+              <button class="btn btn--primary btn--sm" type="button" data-open-project="portfolio" aria-haspopup="dialog">
+                Details <svg aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </button>
+              <a class="btn btn--secondary btn--sm" href="https://github.com/HarshAgarwal1102/Portfolio_Website" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#i-github"/></svg>
+                Repository<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Software foundations -->
+          <article class="card card--pad project project--compact reveal" data-tags="software" aria-labelledby="p-chat-title">
+            <div class="project__top">
+              <span class="project__kicker">java · sockets · mysql</span>
+            </div>
+            <h3 class="project__title" id="p-chat-title">Multi-user chat app</h3>
+            <p class="project__desc">Real-time communication between multiple users, built in Java with a MySQL database.</p>
+            <div class="project__actions">
+              <a class="btn btn--secondary btn--sm" href="https://github.com/HarshAgarwal1102/MultiUser_Chat_App" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#i-github"/></svg>
+                Repository<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+              <a class="btn btn--ghost btn--sm" href="https://medium.com/@harshagarwal2225/646c9a19ff6b" target="_blank" rel="noopener noreferrer">
+                Write-up<span class="visually-hidden"> on Medium (opens in a new tab)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--pad project project--compact reveal" data-tags="software" aria-labelledby="p-sf-title">
+            <div class="project__top">
+              <span class="project__kicker">java · swing</span>
+            </div>
+            <h3 class="project__title" id="p-sf-title">Street Fighter game</h3>
+            <p class="project__desc">A 2D fighting game in Java Swing, built from core OOP concepts with a focus on clean, SOLID structure.</p>
+            <div class="project__actions">
+              <a class="btn btn--secondary btn--sm" href="https://github.com/HarshAgarwal1102/Street_Fighter" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#i-github"/></svg>
+                Repository<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+              <a class="btn btn--ghost btn--sm" href="https://medium.com/@harshagarwal2225/6c506ead9dbe" target="_blank" rel="noopener noreferrer">
+                Write-up<span class="visually-hidden"> on Medium (opens in a new tab)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--pad project project--compact reveal" data-tags="software" aria-labelledby="p-music-title">
+            <div class="project__top">
+              <span class="project__kicker">html · css · javascript</span>
+              <span class="badge badge--ok">live demo</span>
+            </div>
+            <h3 class="project__title" id="p-music-title">Music player</h3>
+            <p class="project__desc">A browser music player for copyright-free tracks, built with plain HTML, CSS and JavaScript.</p>
+            <div class="project__actions">
+              <a class="btn btn--secondary btn--sm" href="https://github.com/HarshAgarwal1102/Music_Player" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#i-github"/></svg>
+                Repository<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+              <a class="btn btn--ghost btn--sm" href="https://agarwal-harsh-music-player.netlify.app/" target="_blank" rel="noopener noreferrer">
+                Live demo <svg aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </article>
+
+          <p class="projects__empty" data-projects-empty hidden>No projects match this filter yet.</p>
+        </div>
+
+        <p class="projects__more">More experiments and learning repositories are on <a href="https://github.com/HarshAgarwal1102?tab=repositories" target="_blank" rel="noopener noreferrer">my GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
+      </div>
+    </section>
+
+    <!-- =============================== ARCHITECTURE =============================== -->
+    <section class="section" id="architecture" aria-labelledby="architecture-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">05 / architecture</p>
+          <h2 class="section-title" id="architecture-title">From pull request to Azure</h2>
+          <p class="lede">
+            The Terraform delivery flow I build toward on Azure. Each node says where it runs today. Solid nodes
+            are implemented in my repositories, and dashed nodes are the intended next step. Select a node for details.
+          </p>
+        </div>
+
+        <div class="arch reveal">
+          <div class="card arch__canvas">
+            <div class="arch__toolbar">
+              <div class="segmented" role="group" aria-label="Choose a flow">
+                <button type="button" data-arch-view="delivery" aria-pressed="true">Change delivery</button>
+                <button type="button" data-arch-view="drift" aria-pressed="false">Drift detection</button>
+              </div>
+              <ul class="legend" aria-label="Legend">
+                <li><span class="legend__swatch" aria-hidden="true"></span>Implemented</li>
+                <li><span class="legend__swatch legend__swatch--key" aria-hidden="true"></span>Key control</li>
+                <li><span class="legend__swatch legend__swatch--planned" aria-hidden="true"></span>Planned</li>
+                <li><span class="legend__swatch legend__swatch--support" aria-hidden="true"></span>Supporting service</li>
+              </ul>
             </div>
 
-            <div>
-              <button type="submit" class="btn-pink" id="submit-btn" onclick="sendEmail(); reset(); return false;">
-                Send Message <i class="submit-icon fa-solid fa-paper-plane"></i>
+            <div class="diagram" data-diagram="delivery">
+              <div class="diagram__lane">
+                <p class="diagram__lane-label" id="lane-delivery">Change delivery · left to right</p>
+                <ol class="diagram__row" aria-labelledby="lane-delivery">
+                  <li><button class="node" type="button" data-node="developer" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-user"/></svg><span class="node__name">Developer</span><span class="node__sub">feature branch</span></button></li>
+                  <li><button class="node" type="button" data-node="pr" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-pr"/></svg><span class="node__name">Pull request</span><span class="node__sub">protected main</span></button></li>
+                  <li><button class="node node--key" type="button" data-node="checks" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-scan"/></svg><span class="node__name">Validate &amp; scan</span><span class="node__sub">fmt · validate · TFLint · Trivy · TruffleHog</span></button></li>
+                  <li><button class="node node--key" type="button" data-node="plan" aria-pressed="true"><svg class="node__icon" aria-hidden="true"><use href="#i-terminal"/></svg><span class="node__name">terraform plan</span><span class="node__sub">OIDC · read-only</span></button></li>
+                  <li><button class="node node--planned" type="button" data-node="approval" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-gate"/></svg><span class="node__name">Approval gate</span><span class="node__sub">GitHub environment</span></button></li>
+                  <li><button class="node" type="button" data-node="apply" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-check"/></svg><span class="node__name">Apply on main</span><span class="node__sub">protected branch only</span></button></li>
+                  <li><button class="node" type="button" data-node="azure" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-cloud"/></svg><span class="node__name">Azure resources</span><span class="node__sub">RG · VNet · NSG · Key Vault</span></button></li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="diagram" data-diagram="drift" hidden>
+              <div class="diagram__lane">
+                <p class="diagram__lane-label" id="lane-drift">Scheduled drift detection · left to right</p>
+                <ol class="diagram__row" aria-labelledby="lane-drift">
+                  <li><button class="node" type="button" data-node="schedule" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-clock"/></svg><span class="node__name">Schedule</span><span class="node__sub">cron 0 2 * * * · manual</span></button></li>
+                  <li><button class="node node--key" type="button" data-node="driftplan" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-terminal"/></svg><span class="node__name">Plan evidence</span><span class="node__sub">plan -detailed-exitcode · show -json</span></button></li>
+                  <li><button class="node node--key" type="button" data-node="engine" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-layers"/></svg><span class="node__name">Drift engine</span><span class="node__sub">classify · severity · redact</span></button></li>
+                  <li><button class="node" type="button" data-node="investigate" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-scan"/></svg><span class="node__name">Investigate</span><span class="node__sub">Activity Log · who / when / what</span></button></li>
+                  <li><button class="node" type="button" data-node="outputs" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-issue"/></svg><span class="node__name">Issues · AI · cost</span><span class="node__sub">one issue per resource</span></button></li>
+                  <li><button class="node node--planned" type="button" data-node="remediate" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-gate"/></svg><span class="node__name">Human-approved remediation</span><span class="node__sub">on hold · Level 2</span></button></li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="diagram__lane diagram__lane--support">
+              <p class="diagram__lane-label" id="lane-support">Supporting services</p>
+              <ul class="diagram__support" aria-labelledby="lane-support">
+                <li><button class="node node--support" type="button" data-node="oidc" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-key"/></svg><span class="node__name">Entra ID · OIDC federation</span><span class="node__sub">short-lived tokens, no client secret</span></button></li>
+                <li><button class="node node--support" type="button" data-node="state" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-database"/></svg><span class="node__name">Remote state · Azure Storage</span><span class="node__sub">azurerm backend · blob lease lock</span></button></li>
+                <li><button class="node node--support" type="button" data-node="secrets" aria-pressed="false"><svg class="node__icon" aria-hidden="true"><use href="#i-lock"/></svg><span class="node__name">Branch protection</span><span class="node__sub">PR-only main · required checks</span></button></li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="card card--pad arch__detail" aria-live="polite" data-arch-detail>
+            <span class="badge badge--ok" data-arch-status>Implemented</span>
+            <h3 data-arch-title>terraform plan</h3>
+            <p data-arch-body>GitHub Actions signs in to Azure with OpenID Connect and runs <code>terraform plan</code>. The identity has no write permissions, so this step can show change but can't make it.</p>
+            <div class="arch__where">
+              <span>Where it runs today</span>
+              <strong data-arch-where>ai-terraform-drift-detector · terraform-auth-test.yml</strong>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== PIPELINE SHOWCASE =============================== -->
+    <section class="section" id="pipeline" aria-labelledby="pipeline-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">06 / pipeline explorer</p>
+          <h2 class="section-title" id="pipeline-title">Inside a Terraform pipeline run</h2>
+          <p class="lede">Go through the stages a pull request passes before it can reach Azure. Pick a stage to see what it checks, what fails it, and example output.</p>
+        </div>
+
+        <div class="card explorer reveal" data-explorer>
+          <div class="explorer__aside">
+            <div class="segmented" role="group" aria-label="Choose a pipeline">
+              <button type="button" data-pipeline="pr" aria-pressed="true">Pull request</button>
+              <button type="button" data-pipeline="drift" aria-pressed="false">Nightly drift</button>
+            </div>
+            <ol class="stage-list" role="tablist" aria-label="Pipeline stages" aria-orientation="vertical" data-stage-list></ol>
+            <div class="explorer__controls">
+              <button class="btn btn--secondary btn--sm" type="button" data-explorer-play>
+                <svg aria-hidden="true"><use href="#i-play"/></svg>
+                <span data-explorer-play-label>Simulate run</span>
               </button>
             </div>
+            <p class="disclaimer"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Illustrative demo with example output. It is not connected to live CI data.</span></p>
+          </div>
 
+          <div class="explorer__main" role="tabpanel" id="stage-panel" data-stage-panel>
+            <div class="explorer__head">
+              <div class="project__top">
+                <h3 data-stage-title>terraform fmt</h3>
+                <span class="badge" data-stage-badge>passed</span>
+              </div>
+              <p data-stage-purpose></p>
+            </div>
+            <dl class="explorer__facts">
+              <div class="explorer__fact"><dt>fails the run when</dt><dd data-stage-fails></dd></div>
+              <div class="explorer__fact"><dt>why it matters</dt><dd data-stage-why></dd></div>
+            </dl>
+            <div class="explorer__output">
+              <div class="explorer__output-bar"><span data-stage-cmd>$ terraform fmt -check</span><span>example output</span></div>
+              <pre data-stage-output></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== LEARNING =============================== -->
+    <section class="section" id="learning" aria-labelledby="learning-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">07 / learning</p>
+          <h2 class="section-title" id="learning-title">Certifications, writing &amp; what's next</h2>
+          <p class="lede">I learn by building something and writing it up. I don't list cloud certifications here because I haven't earned any yet.</p>
+        </div>
+
+        <div class="learning__grid">
+          <article class="card card--pad learn-card reveal">
+            <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-award"/></svg></span>
+            <h3>Introduction to Structured Query Language (SQL)</h3>
+            <p>University of Michigan via Coursera · completed June 2023.</p>
+            <div class="learn-card__links">
+              <a href="https://coursera.org/verify/G8FYX2E833QE" target="_blank" rel="noopener noreferrer">Verify on Coursera<span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a href="assets/docs/coursera-sql-certificate.pdf" target="_blank" rel="noopener">View certificate (PDF)</a>
+            </div>
+          </article>
+
+          <article class="card card--pad learn-card reveal">
+            <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-pen"/></svg></span>
+            <h3>Recent writing</h3>
+            <ul class="article-list">
+              <li><a href="https://medium.com/@harshagarwal2225/azure-policy-and-identity-management-the-two-guardrails-every-azure-platform-needs-747c41351bdf" target="_blank" rel="noopener noreferrer">Azure Policy and Identity Management: the two guardrails every Azure platform needs<span>Medium · Oct 2026</span></a></li>
+              <li><a href="https://medium.com/@harshagarwal2225/terraform-at-scale-modular-infrastructure-and-generic-pipeline-templates-5c9774a78e4e" target="_blank" rel="noopener noreferrer">Terraform at Scale: modular infrastructure and generic pipeline templates<span>Medium · Oct 2026</span></a></li>
+              <li><a href="https://medium.com/@harshagarwal2225/azure-landing-zones-explained-by-a-devops-engineer-f85375c0c063" target="_blank" rel="noopener noreferrer">Azure Landing Zones, explained by a DevOps engineer<span>Medium · Oct 2026</span></a></li>
+            </ul>
+          </article>
+
+          <article class="card card--pad learn-card reveal">
+            <span class="skill-group__icon" aria-hidden="true"><svg><use href="#i-compass"/></svg></span>
+            <h3>Currently building</h3>
+            <p>
+              <strong>Drift detector Level 2</strong>: a local-first CLI (<code>aitdd</code>) that reuses the
+              Level 1 drift engine and checks it produces identical reports. It's in a private repository while it's in progress.
+            </p>
+            <p>Also on the list: human-approved remediation (specified, not built) and moving the landing-zone pipeline to OIDC behind an approval environment.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== CONTACT =============================== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__intro reveal">
+          <div class="section-head">
+            <p class="eyebrow">08 / contact</p>
+            <h2 class="section-title" id="contact-title">Let's build something reliable.</h2>
+            <p class="lede">Hiring for DevOps, cloud or platform engineering, or want to talk Terraform? Send a message or reach me directly.</p>
+          </div>
+          <ul class="contact__channels">
+            <li>
+              <a class="channel" href="mailto:harshagarwal.4404@gmail.com">
+                <svg aria-hidden="true"><use href="#i-mail"/></svg>
+                <span>Email<small>harshagarwal.4404@gmail.com</small></span>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="https://www.linkedin.com/in/harsh4404/" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#i-linkedin"/></svg>
+                <span>LinkedIn<small>in/harsh4404</small></span>
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="https://github.com/HarshAgarwal1102" target="_blank" rel="noopener noreferrer">
+                <svg aria-hidden="true"><use href="#i-github"/></svg>
+                <span>GitHub<small>HarshAgarwal1102</small></span>
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="https://drive.google.com/file/d/1NM0YT_uRSXG6S4tKwD47B3GF6WAhz4dG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" data-resume-link>
+                <svg aria-hidden="true"><use href="#i-file"/></svg>
+                <span>Résumé<small>PDF on Google Drive</small></span>
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card card--pad reveal">
+          <form class="form" id="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="contact">
+            <p class="form__honeypot" aria-hidden="true">
+              <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
+
+            <div class="field">
+              <label for="cf-name">Name <span class="req">(required)</span></label>
+              <input class="input" id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="cf-name-error">
+              <p class="field__error" id="cf-name-error" data-error-for="name"></p>
+            </div>
+
+            <div class="field">
+              <label for="cf-email">Email <span class="req">(required)</span></label>
+              <input class="input" id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" aria-describedby="cf-email-error">
+              <p class="field__error" id="cf-email-error" data-error-for="email"></p>
+            </div>
+
+            <div class="field field--full">
+              <label for="cf-subject">Subject <span class="req">(required)</span></label>
+              <input class="input" id="cf-subject" name="subject" type="text" required maxlength="150" aria-describedby="cf-subject-error">
+              <p class="field__error" id="cf-subject-error" data-error-for="subject"></p>
+            </div>
+
+            <div class="field field--full">
+              <label for="cf-message">Message <span class="req">(required)</span></label>
+              <textarea class="input" id="cf-message" name="message" rows="6" required minlength="20" maxlength="5000" aria-describedby="cf-message-hint cf-message-error"></textarea>
+              <p class="field__hint" id="cf-message-hint">At least 20 characters.</p>
+              <p class="field__error" id="cf-message-error" data-error-for="message"></p>
+            </div>
+
+            <div class="form-status" role="status" aria-live="polite" data-form-status></div>
+
+            <div class="form__foot">
+              <p class="form__privacy">Your message goes only to my inbox. Nothing is tracked or shared.</p>
+              <button class="btn btn--primary" type="submit" data-submit>
+                <span data-submit-label>Send message</span>
+                <svg aria-hidden="true" data-submit-icon><use href="#i-arrow-right"/></svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
-    </div>
+    </section>
+  </main>
 
-
-    <footer>
-      <div class="container">
-        <div class="footer-wrapper">
-          <!-- <div class="footer-faded-text">Harsh Agarwal</div> -->
-          <div class="link-wrapper">
-            <div>
-              <a href="#project">Projects</a>
-            </div>
-            <div>
-              <a href="#skills">Skills</a>
-            </div>
-            <div>
-              <a href="#contact">Contact Me</a>
-            </div>
-          </div>
-          <div class="icon-wrapper">
-            <a href="https://www.linkedin.com/in/harsh4404" target="_blank"><i
-                class="fa-brands fa-linkedin icon"></i></a>
-            <a href="https://github.com/HarshAgarwal1102" target="_blank"><i class="fa-brands fa-github icon"></i></a>
-            <a href="https://twitter.com/agarwal_1102" target="_blank"><i class="fa-brands fa-twitter icon"></i></a>
-            <a href="https://www.instagram.com/harshagarwal_1102/" target="_blank"><i class="fa-brands fa-instagram icon"></i></a>
-            <a href="tel:+917248784012"><i class="fa-solid fa-phone icon"></i></a>
-          </div>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__copy">
+        <strong>© <span data-year>2026</span> Harsh Agarwal</strong>
+        <span>Static site · no trackers · checked in CI</span>
       </div>
-    </footer>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> 
-   <script src="https://smtpjs.com/v3/smtp.js"></script>
-   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
-</body>
+      <ul class="footer__links">
+        <li><a href="https://github.com/HarshAgarwal1102" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li><a href="https://www.linkedin.com/in/harsh4404/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li><a href="https://medium.com/@harshagarwal2225" target="_blank" rel="noopener noreferrer">Medium<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li><a href="mailto:harshagarwal.4404@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
 
+  <a class="icon-btn to-top" href="#home" aria-label="Back to top" data-to-top>
+    <svg aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </a>
+
+  <!-- Project case-study dialog -->
+  <dialog class="dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog__head">
+      <div>
+        <h2 id="dialog-title" data-dialog-title>Project</h2>
+        <p data-dialog-meta></p>
+      </div>
+      <button class="icon-btn dialog__close" type="button" data-dialog-close aria-label="Close case study">
+        <svg aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+    <div class="dialog__body" data-dialog-body></div>
+    <div class="dialog__foot" data-dialog-foot></div>
+  </dialog>
+
+  <!-- Case-study content (kept in HTML so it is crawlable and works without a data fetch) -->
+  <template id="tpl-drift">
+    <section class="dialog__section">
+      <h3>// the problem</h3>
+      <p>Terraform state is a record of what was deployed, not a guarantee of what exists now. A portal edit, a failed run or a policy override makes Azure diverge from code, and nobody notices until the next apply does something unexpected.</p>
+    </section>
+    <section class="dialog__section">
+      <h3>// how it works</h3>
+      <ul class="list">
+        <li>A scheduled GitHub Actions workflow (daily, or on demand) signs in to Azure with OIDC and produces read-only plan evidence: <code>terraform plan -detailed-exitcode</code> and <code>show -json</code>. It never runs <code>apply</code>.</li>
+        <li>A typed Python drift engine (strict Pydantic models) checks the evidence, classifies every managed resource (external drift, deletion, configuration change and more), rates severity, and redacts sensitive values.</li>
+        <li>Each drifted resource gets one structure-only GitHub Issue, which closes again only on evidence.</li>
+        <li>An Activity Log investigation answers who, when and what. A LangGraph analysis (LLM opt-in, off by default) adds security, cost and root-cause context without ever changing the deterministic result.</li>
+        <li>Infracost prices each run's plan. A separate read-only inventory finds Azure resources that Terraform doesn't manage and estimates their list price.</li>
+        <li>A local dashboard (loopback-only API and browser UI) presents the real CI artifacts.</li>
+      </ul>
+    </section>
+    <section class="dialog__section">
+      <h3>// engineering decisions</h3>
+      <ul class="decision-list">
+        <li><strong>Fail closed</strong><span>A failed or invalid run is reported as "unknown", never as "no drift". An integrity gate re-checks the plan evidence before anything is classified.</span></li>
+        <li><strong>Least privilege, no secrets</strong><span>OIDC trust limited to the repository's main branch. Only the Azure plan job may request a token. Every action is pinned by full commit SHA and no checkout keeps its credentials.</span></li>
+        <li><strong>Deterministic first, AI second</strong><span>The LLM never sees or states a cost amount and cannot change drift results or severity. Its output is validated against the evidence.</span></li>
+        <li><strong>Supply-chain care</strong><span>Trivy and TruffleHog run as pinned release binaries rather than third-party wrapper actions.</span></li>
+      </ul>
+    </section>
+    <section class="dialog__section">
+      <h3>// verified results</h3>
+      <ul class="proof">
+        <li><strong>2,885</strong><span>tests (tests.yml run #2)</span></li>
+        <li><strong>98.85%</strong><span>drift-engine coverage, gated at 85%</span></li>
+        <li><strong>135</strong><span>e2e cases with failure injection</span></li>
+        <li><strong>5</strong><span>unmanaged resources found in a live Azure test (~$44.85/mo list price)</span></li>
+      </ul>
+      <p>The live test was a VM created in the Azure Portal on purpose, detected in drift-detection run #44. The test VM has since been deleted.</p>
+    </section>
+    <section class="dialog__section">
+      <h3>// honest scope</h3>
+      <p>Level 1 is released (<code>level1-v1.0.0</code>) and now in maintenance only. Human-approved remediation is specified but not built: no apply, approval environment or write permission exists. Level 2, a local-first CLI, is being developed in a private repository.</p>
+    </section>
+    <section class="dialog__section">
+      <h3>// stack</h3>
+      <ul class="chip-list">
+        <li class="chip chip--mono">Terraform</li><li class="chip chip--mono">Azure</li><li class="chip chip--mono">GitHub Actions</li><li class="chip chip--mono">OIDC</li>
+        <li class="chip chip--mono">Python</li><li class="chip chip--mono">Pydantic</li><li class="chip chip--mono">LangGraph</li><li class="chip chip--mono">pytest</li>
+        <li class="chip chip--mono">TFLint</li><li class="chip chip--mono">Trivy</li><li class="chip chip--mono">TruffleHog</li><li class="chip chip--mono">Infracost</li>
+      </ul>
+    </section>
+  </template>
+
+  <template id="tpl-landing-zone">
+    <section class="dialog__section">
+      <h3>// the problem</h3>
+      <p>Environments built by copying resource blocks drift apart, and reviewers can't tell whether preprod and prod really share a design. A landing zone needs reusable building blocks and a repeatable way to deploy them.</p>
+    </section>
+    <section class="dialog__section">
+      <h3>// what's in it</h3>
+      <ul class="list">
+        <li>Nine reusable <code>azurerm</code> modules: resource group, virtual network, subnet, public IP, Bastion, Key Vault, virtual machine, load balancer and application gateway.</li>
+        <li>Separate <code>preprod</code> and <code>prod</code> environment roots that compose the modules from <code>tfvars</code> maps using <code>for_each</code>.</li>
+        <li>Remote state in Azure Storage through the <code>azurerm</code> backend, one state key per environment.</li>
+        <li>A bootstrap stage that creates the state resource group, storage account (TLS 1.2 minimum, no public blob access) and container idempotently.</li>
+      </ul>
+    </section>
+    <section class="dialog__section">
+      <h3>// pipeline</h3>
+      <ul class="decision-list">
+        <li><strong>Bootstrap → plan → apply</strong><span>Feature branches run bootstrap, <code>init</code>, <code>validate</code> and <code>plan</code>. Apply runs only on <code>main</code>.</span></li>
+        <li><strong>Next improvements</strong><span>Replace the stored service-principal credential with OIDC federation, put apply behind a GitHub environment with required reviewers, and add TFLint, Trivy and secret scanning as required checks.</span></li>
+      </ul>
+    </section>
+    <section class="dialog__section">
+      <h3>// stack</h3>
+      <ul class="chip-list">
+        <li class="chip chip--mono">Terraform</li><li class="chip chip--mono">azurerm 4.x</li><li class="chip chip--mono">Azure Storage backend</li><li class="chip chip--mono">GitHub Actions</li><li class="chip chip--mono">Azure CLI</li>
+      </ul>
+    </section>
+  </template>
+
+  <template id="tpl-portfolio">
+    <section class="dialog__section">
+      <h3>// the problem</h3>
+      <p>The previous version of this site sent mail from the browser using an email-service token embedded in public JavaScript. Anyone could read it and send mail as me.</p>
+    </section>
+    <section class="dialog__section">
+      <h3>// what changed</h3>
+      <ul class="list">
+        <li>Removed the token and the third-party SMTP script. The contact form now posts to a provider-side form service (Netlify Forms or Formspree) and keeps no secrets in the browser.</li>
+        <li>Rebuilt as framework-free semantic HTML, one stylesheet and small ES modules. Fonts are self-hosted and there are no trackers.</li>
+        <li>Added a strict Content Security Policy (<code>script-src 'self'</code>, no inline styles or scripts) and security headers for Netlify.</li>
+        <li>A GitHub Actions workflow runs a zero-dependency checker (internal links, anchors, local assets, external-link safety, secret patterns) and unit tests on every push and pull request.</li>
+      </ul>
+    </section>
+    <section class="dialog__section">
+      <h3>// stack</h3>
+      <ul class="chip-list">
+        <li class="chip chip--mono">HTML</li><li class="chip chip--mono">CSS</li><li class="chip chip--mono">JavaScript (ES modules)</li><li class="chip chip--mono">Node test runner</li><li class="chip chip--mono">GitHub Actions</li><li class="chip chip--mono">Netlify · GitHub Pages</li>
+      </ul>
+    </section>
+  </template>
+</body>
 </html>

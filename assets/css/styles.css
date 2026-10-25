@@ -874,10 +874,18 @@ button {
 /* ---------- About ---------- */
 .about__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  grid-template-areas:
+    "intro photo"
+    "body  photo";
+  column-gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+  row-gap: 0;
   align-items: start;
 }
+
+.about__intro { grid-area: intro; }
+.about__photo { grid-area: photo; }
+.about__body { grid-area: body; }
 
 .about__intro {
   display: grid;
@@ -885,28 +893,36 @@ button {
 }
 
 .about__photo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
+  margin: 0;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
 }
 
 .about__photo img {
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 840 / 900;
   object-fit: cover;
-  object-position: 50% 30%;
-  border: 1px solid var(--line-strong);
+  background: var(--raised);
 }
 
-.about__photo p {
+.about__photo figcaption {
+  display: grid;
+  gap: 2px;
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--line);
   color: var(--text-2);
   font-size: var(--fs-sm);
   line-height: 1.5;
 }
 
 .about__photo strong {
-  display: block;
   color: var(--text);
   font-size: var(--fs-base);
 }
@@ -2456,6 +2472,18 @@ textarea.input {
   .about__grid,
   .contact__grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about__grid {
+    grid-template-areas:
+      "intro"
+      "photo"
+      "body";
+    row-gap: var(--space-6);
+  }
+
+  .about__intro .section-head {
+    margin-bottom: 0;
   }
 
   .hero__terminal {

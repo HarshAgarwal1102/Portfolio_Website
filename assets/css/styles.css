@@ -891,12 +891,14 @@ button {
 }
 
 .about__photo img {
-  width: 88px;
-  height: 88px;
+  flex: none;
+  width: clamp(96px, 80px + 4vw, 128px);
+  height: clamp(96px, 80px + 4vw, 128px);
   border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 30%;
+  background: #fff;
   border: 1px solid var(--line-strong);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--accent-line);
 }
 
 .about__photo p {

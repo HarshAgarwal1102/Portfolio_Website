@@ -4,3 +4,6 @@ node_modules/
 .env
 .env.*
 .claude/
+
+# Camera originals (multi-MB). The site serves resized copies; keep these out of Git.
+assets/img/originals/

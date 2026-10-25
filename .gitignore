@@ -4,3 +4,8 @@ node_modules/
 .env
 .env.*
 .claude/
+
+# Camera originals (multi-MB). The site serves resized copies; keep these out of Git.
+assets/img/harsh-agarwal1.JPG
+assets/img/harsh-agarwal2.jpg
+assets/img/harsh-agarwal3.JPG

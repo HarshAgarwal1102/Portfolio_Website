@@ -72,6 +72,9 @@
     <symbol id="i-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
     <symbol id="i-pr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7M6 9v12"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 14 9-14 9V3z"/></symbol>
     <symbol id="i-replay" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></symbol>
@@ -198,11 +201,40 @@
           </div>
 
           <figure class="about__photo reveal">
-            <img
-              src="assets/img/harsh-agarwal.jpg"
-              width="840" height="900"
-              alt="Harsh Agarwal smiling, wearing sunglasses and a patterned kurta"
-              loading="lazy" decoding="async">
+            <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Photos of Harsh Agarwal" data-carousel data-interval="4000">
+              <ul class="carousel__track" data-carousel-track tabindex="0" aria-label="Photo slides; use arrow keys to move between photos">
+                <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                  <img src="assets/img/harsh-agarwal.jpg" width="840" height="900" alt="Harsh Agarwal smiling, wearing sunglasses and a patterned kurta" loading="eager" decoding="async" data-pos="50% 40%">
+                </li>
+                <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                  <img src="assets/img/harsh-agarwal-seated.jpg" width="840" height="1260" alt="Harsh Agarwal seated outdoors, laughing, in a patterned kurta and sunglasses" loading="lazy" decoding="async" data-pos="50% 35%">
+                </li>
+                <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                  <img src="assets/img/harsh-agarwal-suit-phone.jpg" width="840" height="1260" alt="Harsh Agarwal in a pinstripe suit, leaning on a pillar and checking his phone" loading="lazy" decoding="async" data-pos="55% 45%">
+                </li>
+                <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                  <img src="assets/img/harsh-agarwal-suit.jpg" width="840" height="1260" alt="Harsh Agarwal standing in a pinstripe double-breasted suit, smiling" loading="lazy" decoding="async" data-pos="45% 30%">
+                </li>
+              </ul>
+              <div class="carousel__controls">
+                <button class="carousel__btn" type="button" data-carousel-prev aria-label="Previous photo">
+                  <svg aria-hidden="true"><use href="#i-chevron-left"/></svg>
+                </button>
+                <div class="carousel__dots" role="group" aria-label="Choose a photo">
+                <button class="carousel__dot" type="button" data-slide-to="0" aria-label="Show photo 1 of 4"></button>
+                <button class="carousel__dot" type="button" data-slide-to="1" aria-label="Show photo 2 of 4"></button>
+                <button class="carousel__dot" type="button" data-slide-to="2" aria-label="Show photo 3 of 4"></button>
+                <button class="carousel__dot" type="button" data-slide-to="3" aria-label="Show photo 4 of 4"></button>
+                </div>
+                <button class="carousel__btn" type="button" data-carousel-toggle aria-label="Pause slideshow">
+                  <svg aria-hidden="true" data-icon-pause><use href="#i-pause"/></svg>
+                  <svg aria-hidden="true" data-icon-play hidden><use href="#i-play"/></svg>
+                </button>
+                <button class="carousel__btn" type="button" data-carousel-next aria-label="Next photo">
+                  <svg aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </button>
+              </div>
+            </div>
             <figcaption><strong>Harsh Agarwal</strong>Uttar Pradesh, India · Azure-first</figcaption>
           </figure>
 

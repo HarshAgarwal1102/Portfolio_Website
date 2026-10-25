@@ -2,6 +2,7 @@ import { config } from './config.js';
 import { initArchitecture } from './architecture.js';
 import { initPipelineExplorer } from './pipeline.js';
 import { initContactForm } from './contact.js';
+import { initCarousel } from './carousel.js';
 
 document.documentElement.classList.add('js');
 
@@ -404,4 +405,5 @@ initDialog();
 initArchitecture();
 initPipelineExplorer();
 initContactForm();
+initCarousel();
 initMisc();
